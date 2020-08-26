@@ -6,11 +6,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 public class LoginEmail {
 	
-	
+	@Test
 	 public void LoginTest() throws EmailException, InterruptedException  {
 	
-		 System.setProperty("webdriver.chrome.driver","C:\\Users\\Lenovo PC\\Desktop\\chromedriver.exe");  
-	     WebDriver browser = new ChromeDriver();
+		 String chromeDriverPath = "/usr/bin/chromedriver";
+		 System.setProperty("webdriver.chrome.driver", chromeDriverPath);
+		 
+		 WebDriver browser = new ChromeDriver();
 	     browser.get("https://www.google.com/");
 	     
 	     Thread.sleep(10000);
